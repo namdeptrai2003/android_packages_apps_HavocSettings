@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 Havoc-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:title="@string/lockscreen_title"
+    xmlns:lineage="http://schemas.android.com/apk/res/lineageos.platform" 	
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
+
+   <PreferenceCategory
+        android:key="ls_clock"
+        android:title="@string/ls_clock">
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference
+        android:key="hide_lockscreen_clock" 
+        android:title="@string/hide_lockscreen_clock_title" 
+        android:summary="@string/hide_lockscreen_clock_summary" 
+        android:defaultValue="true" /> 
+	
+    <ListPreference 
+        android:key="lockscreen_clock_selection" 
+        android:title="@string/lockscreen_clock_selection_title" 
+        android:entries="@array/lockscreen_clock_selection_entries" 
+        android:entryValues="@array/lockscreen_clock_selection_values" 
+        android:defaultValue="0" 
+        android:dependency="hide_lockscreen_clock" /> 	
+    
+      <ListPreference 
+         android:key="lock_clock_fonts" 
+         android:title="@string/lock_clock_font_title" 
+         android:dialogTitle="@string/lock_clock_font_dialog_title" 
+         android:entries="@array/lock_clock_fonts_entries" 
+         android:entryValues="@array/lock_clock_fonts_values" 
+         android:summary="@string/lock_clock_font_summary" 
+         android:persistent="false" /> 
+    
+     <com.havoc.settings.preferences.CustomSeekBarPreference 
+        android:key="lockclock_font_size" 
+        android:title="@string/lockclock_font_size_title" 
+        android:max="108" 
+        settings:min="50"
+        android:persistent="false" 
+        android:defaultValue="78" 
+        settings:units="dp"
+        android:dependency="hide_lockscreen_clock" /> 
+
+    </PreferenceCategory>
+
+      <PreferenceCategory
+        android:key="ls_date"
+        android:title="@string/ls_date">
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference
+        android:key="hide_lockscreen_date" 
+        android:title="@string/hide_lockscreen_date_title" 
+        android:summary="@string/hide_lockscreen_date_summary" 
+        android:defaultValue="true" />
+		
+    <ListPreference 
+        android:key="lockscreen_date_selection" 
+        android:title="@string/lockscreen_date_selection_title" 
+        android:entries="@array/lockscreen_date_selection_entries" 
+        android:entryValues="@array/lockscreen_date_selection_values" 
+        android:defaultValue="0" 
+        android:dependency="hide_lockscreen_date" />
+    
+     <ListPreference 
+        android:key="lock_date_fonts" 
+        android:title="@string/lock_date_font_title" 
+        android:dialogTitle="@string/lock_date_font_dialog_title" 
+        android:summary="@string/lock_date_font_summary" 
+        android:entries="@array/lock_clock_fonts_entries" 
+        android:entryValues="@array/lock_clock_fonts_values" 
+        android:persistent="false" /> 
+    
+    <com.havoc.settings.preferences.CustomSeekBarPreference 
+        android:key="lockdate_font_size" 
+        android:title="@string/lockdate_font_size_title" 
+        android:max="25" 
+        settings:min="1"
+        settings:units="sp"
+        android:defaultValue="14" 
+        android:persistent="false" 
+        android:dependency="hide_lockscreen_date" /> 
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_alarm"
+        android:title="@string/ls_alarm">
+
+    <com.havoc.settings.preferences.SecureSettingSwitchPreference 
+        android:key="hide_lockscreen_alarm" 
+        android:title="@string/hide_lockscreen_alarm_title" 
+        android:summary="@string/hide_lockscreen_alarm_summary" 
+        android:defaultValue="true" /> 
+    
+    <com.havoc.settings.preferences.CustomSeekBarPreference 
+        android:key="lockalarm_font_size" 
+        android:title="@string/lockalarm_font_size_title" 
+        android:max="25" 
+        settings:min="1"
+        settings:units="sp"
+        android:defaultValue="14" 
+        android:persistent="false" 
+        android:dependency="hide_lockscreen_alarm" /> 
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_colors"
+        android:title="@string/ls_colors">
+
+    <Preference
+        android:key="lockscreen_colors" 
+        android:title="@string/lockscreen_colors" 
+        android:fragment="com.havoc.settings.fragments.LockColors" />
+
+    </PreferenceCategory>
+
+      <PreferenceCategory
+        android:key="ls_aplha"
+        android:title="@string/ls_aplha">
+
+    <com.havoc.settings.preferences.CustomSeekBarPreference 
+        android:key="lockscreen_security_alpha" 
+        android:title="@string/lockscreen_security_alpha" 
+        android:max="100" 
+        settings:min="0" 
+        settings:interval="1" 
+        settings:units="" 
+        android:persistent="false" /> 
+ 
+    <com.havoc.settings.preferences.CustomSeekBarPreference 
+        android:key="lockscreen_alpha" 
+        android:title="@string/lockscreen_alpha" 
+        android:max="100" 
+        settings:min="0" 
+        settings:interval="1" 
+        settings:units="%" 
+        android:persistent="false" /> 
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_nofi"
+        android:title="@string/ls_nofi">
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference
+        android:key="lock_screen_custom_notif"
+        android:title="@string/lockscreen_maxnotif_title"
+        android:summary="@string/lockscreen_maxnotif_summary"
+        android:defaultValue="false" />
+
+    <com.havoc.settings.preferences.CustomSeekBarPreference
+        android:key="lockscreen_max_notif_config"
+        android:title="@string/lockscreen_maxnotif_config"
+        android:max="8"
+        settings:min="0"
+        settings:units=""
+        android:persistent="false"
+        android:dependency="lock_screen_custom_notif"/>	
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_unlocking"
+        android:title="@string/ls_unlocking">
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference
+        android:key="double_tap_sleep_lockscreen"
+        android:title="@string/double_tap_sleep_lockscreen_title"
+        android:summary="@string/double_tap_sleep_lockscreen_sumary"
+        android:defaultValue="false" />
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference  
+        android:key="lockscreen_quick_unlock_control"  
+        android:title="@string/unlock_quick_unlock_control_title"  
+        android:summary="@string/unlock_quick_unlock_control_summary" />
+
+    <com.havoc.settings.preferences.SecureSettingSwitchPreference 
+        android:key="face_auto_unlock" 
+        android:title="@string/face_auto_unlock_title" 
+        android:summary="@string/face_auto_unlock_summary" 
+        android:defaultValue="false" /> 		
+			
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference 
+        android:key="pocket_judge" 
+        android:title="@string/pocket_judge_title" 
+        android:summary="@string/pocket_judge_summary" 
+        android:defaultValue="false" />		
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_info"
+        android:title="@string/ls_info">
+
+   <com.havoc.settings.preferences.SystemSettingSwitchPreference
+        android:key="lockscreen_battery_info"
+        android:title="@string/lockscreen_battery_info_title"
+        android:summary="@string/lockscreen_battery_info_summary"
+        android:defaultValue="true" />
+		
+    <lineageos.preference.LineageSecureSettingSwitchPreference 
+        android:key="lockscreen_visualizer" 
+        android:title="@string/lockscreen_visualizer_title" 
+        android:summary="@string/lockscreen_visualizer_summary" 
+        android:defaultValue="true" /> 
+ 
+    <lineageos.preference.LineageSecureSettingSwitchPreference 
+        android:key="lockscreen_media_metadata"
+        android:title="@string/media_art_title"
+        android:summary="@string/media_art_summary"
+        android:defaultValue="true" />
+		
+    </PreferenceCategory>
+
+     <PreferenceCategory
+        android:key="ls_disalbe_elements"
+        android:title="@string/ls_disalbe_elements">
+
+       <com.havoc.settings.preferences.SystemSettingSwitchPreference 
+        android:key="hide_lockscreen_status_bar" 
+        android:title="@string/hide_lockscreen_status_bar_title" 
+        android:summary="@string/hide_lockscreen_status_bar_summary" 
+        android:defaultValue="false" /> 
+
+        <com.havoc.settings.preferences.GlobalSettingSwitchPreference 
+          android:key="lockscreen_enable_qs" 
+          android:title="@string/lockscreen_enable_qs_title" 
+          android:summary="@string/lockscreen_enable_qs_summary" 
+          android:defaultValue="true" /> 
+
+     <com.havoc.settings.preferences.GlobalSettingSwitchPreference 
+            android:key="lockscreen_enable_power_menu"  
+            android:title="@string/lockscreen_enable_power_menu_title" 
+            android:summary="@string/lockscreen_enable_power_menu_summary" 
+            android:defaultValue="true" /> 
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_bot_elements"
+        android:title="@string/ls_bot_elements">
+
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference 
+        android:key="hide_lockscreen_indicator_display" 
+        android:title="@string/hide_lockscreen_indicator_display_title" 
+        android:summary="@string/hide_lockscreen_indicator_display_summary" 
+        android:defaultValue="false" /> 
+ 
+    <com.havoc.settings.preferences.SystemSettingSwitchPreference 
+        android:key="hide_lockscreen_icon" 
+        android:title="@string/hide_lockscreen_icon_title" 
+        android:summary="@string/hide_lockscreen_icon_summary" 
+        android:defaultValue="false" /> 
+
+    </PreferenceCategory>
+
+  <PreferenceCategory
+        android:key="ls_shortcuts"
+        android:title="@string/ls_shortcuts">
+
+    <PreferenceScreen 
+             android:key="lockscreen_shortcuts" 
+             android:fragment="com.android.settings.havoc.dslv.ActionListViewSettings" 
+             android:summary="@string/lockscreen_shortcuts_summary" 
+             android:title="@string/lockscreen_shortcuts_title"> 
+        <extra android:name="actionMode" android:value="4" /> 
+        <extra android:name="maxAllowedActions" android:value="8" /> 
+        <extra android:name="disableLongpress" android:value="true" /> 
+        <extra android:name="useAppPickerOnly" android:value="true" /> 
+        <extra android:name="fragment" android:value="com.android.settings.havoc.fragments.LockscreenShortcutFragment" /> 
+    </PreferenceScreen> 
+
+     <Preference 
+        android:key="bottom_shortcuts_category" 
+            android:title="@string/havoc_lockscreen_target_title" 
+            android:summary="@string/lockscreen_targets_summary"> 
+        <intent android:action="android.intent.action.MAIN" 
+            android:targetPackage="com.android.systemui" 
+            android:targetClass="com.android.systemui.tuner.LockscreenActivity" /> 
+    </Preference>
+
+    </PreferenceCategory>
+	
+</PreferenceScreen>

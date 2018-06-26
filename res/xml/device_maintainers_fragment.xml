@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2018 Havoc-OS
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.havoc.settings"
+    android:title="@string/device_maintainers_title">
+ 
+    <PreferenceCategory
+        android:id="@+id/device_category_oneplus"
+        android:title="@string/device_category_oneplus_title">
+
+        <Preference 
+            android:id="@+id/device_oneplus3" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_oneplus3_summary" 
+            android:selectable="false" 
+            android:title="@string/device_oneplus3" />
+
+        <Preference 
+            android:id="@+id/device_oneplus3t" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_oneplus3t_summary" 
+            android:selectable="false" 
+            android:title="@string/device_oneplus3t" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_google"
+        android:title="@string/device_category_google_title">
+
+        <Preference 
+            android:id="@+id/device_marlin" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_marlin_summary" 
+            android:selectable="false" 
+            android:title="@string/device_marlin" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_motorola"
+        android:title="@string/device_category_motorola_title">
+
+        <Preference 
+            android:id="@+id/device_osprey" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_osprey_summary" 
+            android:selectable="false" 
+            android:title="@string/device_osprey" />
+
+        <Preference 
+            android:id="@+id/device_potter" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_potter_summary" 
+            android:selectable="false" 
+            android:title="@string/device_potter" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_xiaomi"
+        android:title="@string/device_category_xiaomi_title">
+
+        <Preference 
+            android:id="@+id/device_sagit" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_sagit_summary" 
+            android:selectable="false" 
+            android:title="@string/device_sagit" />
+
+        <Preference 
+            android:id="@+id/device_vince" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_vince_summary" 
+            android:selectable="false" 
+            android:title="@string/device_vince" />
+
+        <Preference 
+            android:id="@+id/device_kenzo" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_kenzo_summary" 
+            android:selectable="false" 
+            android:title="@string/device_kenzo" />
+
+        <Preference 
+            android:id="@+id/device_mido" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_mido_summary" 
+            android:selectable="false" 
+            android:title="@string/device_mido" />
+
+        <Preference 
+            android:id="@+id/device_whyred" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_whyred_summary" 
+            android:selectable="false" 
+            android:title="@string/device_whyred" />
+
+        <Preference 
+            android:id="@+id/device_land" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_land_summary" 
+            android:selectable="false" 
+            android:title="@string/device_land" />
+
+        <Preference 
+            android:id="@+id/device_santoni" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_santoni_summary" 
+            android:selectable="false" 
+            android:title="@string/device_santoni" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_lenovo"
+        android:title="@string/device_category_lenovo_title">
+
+        <Preference 
+            android:id="@+id/device_a6020" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_a6020_summary" 
+            android:selectable="false" 
+            android:title="@string/device_a6020" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_zuk"
+        android:title="@string/device_category_zuk_title">
+
+        <Preference 
+            android:id="@+id/device_z2_plus" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_z2_plus_summary" 
+            android:selectable="false" 
+            android:title="@string/device_z2_plus" />
+    </PreferenceCategory>
+	
+    <PreferenceCategory
+        android:id="@+id/device_category_leeco"
+        android:title="@string/device_category_leeco_title">
+
+        <Preference 
+            android:id="@+id/device_s2" 
+            android:icon="@drawable/phone_tint" 
+            android:summary="@string/device_s2_summary" 
+            android:selectable="false" 
+            android:title="@string/device_s2" />
+    </PreferenceCategory>
+</PreferenceScreen>
